@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Pointhead" content="Websiteku" />
+    <title>History</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- cdn font google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- cdn icon google font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container-nav">
+        <div class="icon-menu">
+          <span id="buka-sidebar" class="material-symbols-outlined">
+            menu
+          </span>
+        </div>
+        <div class="item-nav-1">
+          <p>POINTHEAD</p>
+        </div>
+        <div class="icon-account">
+          <div class="icon-search-nav">
+            <span class="material-symbols-outlined">
+              search
+            </span>
+          </div>
+          <a href="login.html">
+            <span class="material-symbols-outlined">
+              account_circle
+            </span>
+          </a>
+        </div>
+        <div class="search-nav">
+          <p class="material-symbols-outlined">
+            close
+          </p>
+          <input type="text" placeholder="Pencarian" />
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </div>
+        <div class="nav-list">
+          <span id="tutup-sidebar" class="material-symbols-outlined close-list">
+            close
+          </span>
+          <ul class="nav-item-list">
+            <li class="item-list">
+              <a href="index.html"
+                ><span class="material-symbols-outlined">
+                  toys
+                </span>
+                GAMES</a
+              >
+            </li>
+            <li class="item-list">
+              <a href="leaderboard.html"
+                ><span class="material-symbols-outlined"> emoji_events </span
+                >LEADERBOARD</a
+              >
+            </li>
+            <li class="item-list">
+              <a href="merch.html"
+                ><span class="material-symbols-outlined"> shopping_cart </span
+                >MERCH</a
+              >
+            </li>
+            <li class="item-list">
+              <a href="history.html"
+                ><span class="material-symbols-outlined"> history </span
+                >HISTORY</a
+              >
+            </li>
+            <li class="item-list">
+              <a href="topup.html"
+                ><span class="material-symbols-outlined"> credit_card </span
+                >TOPUP</a
+              >
+            </li>
+            <li class="recent-list item-list">
+              RECENT
+              <figure>
+                <img src="img/rencent-2.jpeg" alt="" />
+              </figure>
+              <figure>
+                <img src="img/rencent-1.webp" alt="" />
+              </figure>
+              <figure>
+                <img src="img/rencent.jpg" alt="" />
+              </figure>
+            </li>
+            <li onclick="togglegameroomsNav()" class="category-list">
+              GAME ROOMS
+              <span id="gamerooms-arrow" class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </li>
+            <ul class="dropdown-gamerooms">
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    flag
+                  </span>
+                  INDONESIA</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> flag </span>MALAY</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> flag </span
+                  >JEPANG</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> flag </span
+                  >BEKASI</a
+                >
+              </li>
+            </ul>
+            <li onclick="toggleCategoryNav()" class="category-list">
+              CATEGORY
+              <span id="category-arrow" class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </li>
+            <ul class="dropdown-category">
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    sports_esports
+                  </span>
+                  SPORT</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    sports_esports </span
+                  >SCOLL</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    sports_esports </span
+                  >SEA</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    sports_esports </span
+                  >ADVENTURE</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <div class="item-nav-2">
+          <a href="index.html" class="nav-game"
+            ><span class="material-symbols-outlined"> stadia_controller </span>
+            GAMES</a
+          >
+          <a href="leaderboard.html" class="nav-leaderboard"
+            ><span class="material-symbols-outlined">
+              emoji_events
+            </span>
+            LEADERBOARD</a
+          >
+          <a href="merch.html" class="nav-merch"
+            ><span class="material-symbols-outlined">
+              local_atm
+            </span>
+            MERCH</a
+          >
+        </div>
+        <div class="item-nav-3">
+          <div class="rencent-game-nav">
+            <p>RECENT</p>
+            <figure>
+              <img src="img/rencent-2.jpeg" alt="" />
+            </figure>
+            <figure>
+              <img src="img/rencent-1.webp" alt="" />
+            </figure>
+            <figure>
+              <img src="img/rencent.jpg" alt="" />
+            </figure>
+          </div>
+          <a href="" class="points-nav">100 POINTS</a>
+          <div class="notification-nav">
+            <span class="material-symbols-outlined">
+              notifications_active
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container-header">
+        <div class="header-1">
+          <a href="login.html" class="header-1-login"
+            ><span class="material-symbols-outlined">
+              person
+            </span>
+            LOGIN</a
+          >
+          <a href="history.html" class="header-1-history"
+            ><span class="material-symbols-outlined">
+              history
+            </span>
+            HISTORY</a
+          >
+          <a href="topup.html" class="header-1-topup"
+            ><span class="material-symbols-outlined">
+              credit_card
+            </span>
+            TOPUP</a
+          >
+        </div>
+        <div class="header-2">
+          <div class="header-2-top-item">
+            <h1>
+              <span class="material-symbols-outlined">
+                star
+              </span>
+              Game Rooms
+            </h1>
+            <div class="container-search">
+              <input type="search" name="" id="" placeholder="Pencarian" />
+              <span class="material-symbols-outlined">
+                search
+              </span>
+            </div>
+          </div>
+          <div class="header-2-bottom-item">
+            <div class="container-server">
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+              <a href="" class="header-2-server">
+                Indonesia<span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main-game">
+      <div class="container-main-game">
+        <aside class="sidebar">
+          <div class="header-sidebar">
+            <svg
+              width="25"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.36719 9.49414C4.78906 8.22852 4.5 6.7793 4.5 5.14648H1.5V6.27148C1.5 6.88086 1.86914 7.51367 2.60742 8.16992C3.3457 8.82617 4.26562 9.26758 5.36719 9.49414ZM18 6.27148V5.14648H15C15 6.7793 14.7109 8.22852 14.1328 9.49414C15.2344 9.26758 16.1543 8.82617 16.8926 8.16992C17.6309 7.51367 18 6.88086 18 6.27148ZM19.5 4.77148V6.27148C19.5 6.82617 19.3379 7.38477 19.0137 7.94727C18.6895 8.50977 18.252 9.01758 17.7012 9.4707C17.1504 9.92383 16.4746 10.3047 15.6738 10.6133C14.873 10.9219 14.0312 11.0957 13.1484 11.1348C12.8203 11.5566 12.4492 11.9277 12.0352 12.248C11.7383 12.5137 11.5332 12.7969 11.4199 13.0977C11.3066 13.3984 11.25 13.748 11.25 14.1465C11.25 14.5684 11.3691 14.9238 11.6074 15.2129C11.8457 15.502 12.2266 15.6465 12.75 15.6465C13.3359 15.6465 13.8574 15.8242 14.3145 16.1797C14.7715 16.5352 15 16.9824 15 17.5215V18.2715C15 18.3809 14.9648 18.4707 14.8945 18.541C14.8242 18.6113 14.7344 18.6465 14.625 18.6465H4.875C4.76562 18.6465 4.67578 18.6113 4.60547 18.541C4.53516 18.4707 4.5 18.3809 4.5 18.2715V17.5215C4.5 16.9824 4.72852 16.5352 5.18555 16.1797C5.64258 15.8242 6.16406 15.6465 6.75 15.6465C7.27344 15.6465 7.6543 15.502 7.89258 15.2129C8.13086 14.9238 8.25 14.5684 8.25 14.1465C8.25 13.748 8.19336 13.3984 8.08008 13.0977C7.9668 12.7969 7.76172 12.5137 7.46484 12.248C7.05078 11.9277 6.67969 11.5566 6.35156 11.1348C5.46875 11.0957 4.62695 10.9219 3.82617 10.6133C3.02539 10.3047 2.34961 9.92383 1.79883 9.4707C1.24805 9.01758 0.810547 8.50977 0.486328 7.94727C0.162109 7.38477 0 6.82617 0 6.27148V4.77148C0 4.45898 0.109375 4.19336 0.328125 3.97461C0.546875 3.75586 0.8125 3.64648 1.125 3.64648H4.5V2.52148C4.5 2.00586 4.68359 1.56445 5.05078 1.19727C5.41797 0.830078 5.85938 0.646484 6.375 0.646484H13.125C13.6406 0.646484 14.082 0.830078 14.4492 1.19727C14.8164 1.56445 15 2.00586 15 2.52148V3.64648H18.375C18.6875 3.64648 18.9531 3.75586 19.1719 3.97461C19.3906 4.19336 19.5 4.45898 19.5 4.77148Z"
+                fill="#FFCB31"
+              />
+            </svg>
+            <p>Top 0</p>
+          </div>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <p class="content-sidebar">1. Plants Vs Zombie</p>
+          <a href="" class="view-all-sidebar">VIEW ALL</a>
+          <div class="container-tag-cloud">
+            <h2 class="header-tag-cloud">TAG CLOUD</h2>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+            <a href="" class="tag-cloud">fun</a>
+          </div>
+          <div class="container-ads">
+            <h2 class="header-ads">ADS</h2>
+            <a href="">
+              <figure>
+                <img src="img/ads/ads.png" class="ads" alt="" />
+              </figure>
+            </a>
+          </div>
+        </aside>
+        <section class="main-user-content">
+            <h1>History Game</h1>
+            <div class="search-history">
+                <span class="material-symbols-outlined searching-history">
+                    search
+                </span>
+                <input type="text" placeholder="Cari ID">
+            </div>
+            <ul class="container-game-history">
+                <li class="item-game-history">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history bg-history-color">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history bg-history-color">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/lose.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game-danger">- 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history bg-history-color">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history bg-history-color">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+                <li class="item-game-history">
+                    <a href="" class="content-game-history">
+                        <figure>
+                            <img src="img/history/win.png" alt="">
+                        </figure>
+                        <p class="redeem-point">Penalti Shot</p>
+                        <span class="redeem-point">ROOM1</span>
+                        <span class="date-history-topup">11-OKTOBER-2023</span>
+                        <div class="button-game">+ 9 POIN</div>
+                    </a>
+                </li>
+            </ul>
+        
+        
+            <div class="container-page-history">
+                <p>Item Halaman</p>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <span>1 - 5 dari 20</span>
+                <div class="page-history">
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            chevron_left
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            chevron_right
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+      </div>
+    </section>
+    <footer>
+      <div class="container-footer">
+        <figure>
+          <img class="bg-footer" src="img/bg-footer.png" alt="" />
+          <img class="bg-footer-gama" src="img/gama.png" alt="" />
+        </figure>
+        <div class="content-footer">
+          <h2 class="header-footer">POINTHEAD</h2>
+          <ul class="footer-about">
+            <a href="">
+              <li>About Us</li>
+            </a>
+            <a href="">
+              <li>Carers</li>
+            </a>
+            <a href="">
+              <li>Support</li>
+            </a>
+            <a href="">
+              <li>Site Map</li>
+            </a>
+          </ul>
+          <ul class="footer-media">
+            <a href="">
+              <li>
+                <svg
+                  width="26"
+                  height="22"
+                  viewBox="0 0 26 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1309)">
+                    <path
+                      d="M25.3391 3.2754C24.7782 3.52402 24.1955 3.72047 23.5985 3.86226C24.2603 3.23431 24.753 2.44964 25.0312 1.5808C25.0483 1.52592 25.0485 1.46714 25.0316 1.41217C25.0148 1.3572 24.9816 1.30862 24.9366 1.27281C24.8916 1.23701 24.8369 1.21567 24.7795 1.21157C24.7222 1.20748 24.6649 1.22084 24.6153 1.24989C23.7859 1.74232 22.8899 2.1127 21.9549 2.34962C21.9007 2.36345 21.8449 2.3705 21.789 2.37062C21.6172 2.37006 21.4515 2.30678 21.3231 2.19266C20.3288 1.31666 19.0491 0.833552 17.7239 0.833985C17.1393 0.835522 16.5582 0.925174 16.0003 1.09992C15.1301 1.37186 14.3453 1.86484 13.7226 2.53071C13.0998 3.19658 12.6604 4.01258 12.4472 4.89902C12.2886 5.55301 12.245 6.2296 12.3182 6.89854C12.3211 6.92604 12.3182 6.95383 12.3098 6.98016C12.3013 7.00649 12.2875 7.03078 12.2692 7.0515C12.2505 7.07283 12.2274 7.08993 12.2016 7.10165C12.1757 7.11337 12.1476 7.11945 12.1193 7.11949H12.0973C10.1953 6.94714 8.34733 6.39475 6.6628 5.49504C4.97828 4.59533 3.49151 3.36663 2.2906 1.88174C2.26152 1.84625 2.2243 1.81832 2.18211 1.8003C2.13992 1.78228 2.09401 1.77472 2.04827 1.77825C2.00253 1.78179 1.95832 1.79631 1.91939 1.82059C1.88047 1.84488 1.84799 1.8782 1.82471 1.91773C1.21795 2.9623 0.975595 4.17893 1.13576 5.37627C1.29593 6.57362 1.84952 7.68378 2.7095 8.53216C2.2759 8.4293 1.85845 8.2675 1.46879 8.05127C1.42573 8.02743 1.37724 8.01516 1.32803 8.01563C1.27882 8.01611 1.23057 8.02932 1.18798 8.05399C1.1454 8.07866 1.10993 8.11393 1.08502 8.15638C1.06012 8.19883 1.04664 8.247 1.04589 8.29621C1.03302 9.35076 1.32646 10.3864 1.89062 11.2774C2.45478 12.1685 3.2654 12.8766 4.22414 13.316H4.10716C3.79952 13.3159 3.49257 13.2868 3.19038 13.229C3.142 13.22 3.09212 13.2237 3.04558 13.2397C2.99904 13.2557 2.95743 13.2834 2.92482 13.3203C2.8922 13.3571 2.86968 13.4018 2.85945 13.4499C2.84923 13.4981 2.85164 13.548 2.86646 13.595C3.17405 14.5495 3.73892 15.4008 4.49895 16.0552C5.25898 16.7096 6.18474 17.1417 7.17443 17.3041C5.51219 18.4226 3.55333 19.0184 1.54977 19.0147H0.920921C0.827775 19.014 0.737095 19.0446 0.663344 19.1015C0.589594 19.1584 0.537023 19.2383 0.514018 19.3286C0.492037 19.4195 0.500243 19.5151 0.537398 19.601C0.574552 19.6868 0.638636 19.7583 0.719969 19.8045C2.99925 21.1296 5.5887 21.8277 8.22518 21.828C10.4367 21.8483 12.6259 21.3839 14.6387 20.4673C16.4311 19.6355 18.0297 18.4378 19.3315 16.9512C20.5749 15.5361 21.5484 13.9053 22.2039 12.1393C22.8386 10.4554 23.1693 8.67211 23.1806 6.87255V6.78957C23.1809 6.65112 23.2122 6.5145 23.2722 6.38975C23.3322 6.265 23.4195 6.15531 23.5275 6.06874C24.3646 5.38994 25.095 4.58919 25.694 3.69331C25.7278 3.64201 25.7441 3.58116 25.7405 3.51984C25.7369 3.45852 25.7136 3.4 25.674 3.35301C25.6345 3.30602 25.5808 3.27308 25.521 3.25909C25.4611 3.24511 25.3984 3.25083 25.3421 3.2754H25.3391Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1309">
+                      <rect
+                        width="25.24"
+                        height="20.995"
+                        fill="white"
+                        transform="translate(0.5 0.832031)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1316)">
+                    <path
+                      d="M21.0733 0.830079H3.90728C3.49122 0.829816 3.07918 0.911539 2.69471 1.07058C2.31024 1.22962 1.96088 1.46285 1.66658 1.75696C1.37229 2.05107 1.13883 2.40029 0.979546 2.78466C0.820264 3.16903 0.738281 3.58101 0.738281 3.99708L0.738281 21.1631C0.738281 21.5791 0.820264 21.9911 0.979546 22.3755C1.13883 22.7599 1.37229 23.1091 1.66658 23.4032C1.96088 23.6973 2.31024 23.9305 2.69471 24.0896C3.07918 24.2486 3.49122 24.3303 3.90728 24.3301H12.3733L12.3873 15.9301H10.2063C10.07 15.9301 9.93935 15.8761 9.84283 15.7799C9.7463 15.6838 9.69181 15.5533 9.69128 15.4171L9.68128 12.7101C9.68102 12.6423 9.69414 12.5751 9.71991 12.5124C9.74567 12.4497 9.78356 12.3927 9.83141 12.3446C9.87926 12.2966 9.93612 12.2585 9.99874 12.2325C10.0613 12.2065 10.1285 12.1931 10.1963 12.1931H12.3743V9.58008C12.3743 6.54508 14.2283 4.89208 16.9363 4.89208H19.1583C19.2949 4.89208 19.4259 4.94634 19.5224 5.04292C19.619 5.1395 19.6733 5.27049 19.6733 5.40708V7.69008C19.6733 7.82667 19.619 7.95766 19.5224 8.05424C19.4259 8.15082 19.2949 8.20508 19.1583 8.20508H17.7933C16.3203 8.20508 16.0353 8.90508 16.0353 9.93208V12.1961H19.2713C19.3439 12.1961 19.4158 12.2116 19.482 12.2414C19.5483 12.2712 19.6075 12.3147 19.6557 12.369C19.704 12.4233 19.7402 12.4872 19.762 12.5565C19.7838 12.6258 19.7907 12.6989 19.7823 12.7711L19.4613 15.4781C19.4464 15.6032 19.3861 15.7184 19.292 15.8021C19.1978 15.8857 19.0762 15.932 18.9503 15.9321H16.0503L16.0383 24.3301H21.0763C21.9152 24.3288 22.7193 23.9946 23.3121 23.4011C23.9049 22.8075 24.238 22.003 24.2383 21.1641V3.99708C24.2383 3.15748 23.9049 2.35225 23.3114 1.75838C22.7179 1.16451 21.9129 0.830609 21.0733 0.830079Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1316">
+                      <rect
+                        width="23.5"
+                        height="23.5"
+                        fill="white"
+                        transform="translate(0.740234 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="30"
+                  height="23"
+                  viewBox="0 0 30 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1323)">
+                    <path
+                      d="M14.7402 22.8281C14.6652 22.8281 7.16723 22.7751 4.88923 22.5281C4.76723 22.5001 4.61723 22.4791 4.44423 22.4541C3.39708 22.3957 2.41186 21.9392 1.69023 21.1781C1.078 20.2448 0.684852 19.185 0.540234 18.0781C0.353249 16.4011 0.253116 14.7155 0.240234 13.0281L0.240234 10.6781C0.25432 8.97416 0.354447 7.27199 0.540234 5.57812C0.659444 4.46515 1.05474 3.39957 1.69023 2.47812C2.05003 2.08615 2.48441 1.76989 2.96794 1.54787C3.45148 1.32585 3.97445 1.20253 4.50623 1.18512L4.59023 1.17812C8.59923 0.881125 14.6792 0.828125 14.7402 0.828125C14.8012 0.828125 20.8812 0.881125 24.8902 1.17812L25.0262 1.18913C25.5518 1.19712 26.0697 1.31608 26.546 1.53822C27.0223 1.76036 27.4463 2.08066 27.7902 2.47812C28.4025 3.4115 28.7956 4.47128 28.9402 5.57812C29.1261 7.27198 29.2262 8.97416 29.2402 10.6781V13.0281C29.225 14.7154 29.1249 16.4009 28.9402 18.0781C28.7954 19.1849 28.4023 20.2446 27.7902 21.1781C27.4308 21.5695 26.997 21.8852 26.5142 22.1071C26.0314 22.3289 25.5093 22.4523 24.9782 22.4701L24.8902 22.4781C20.8862 22.8281 14.8012 22.8281 14.7402 22.8281ZM11.2402 6.77812V17.6281L20.7402 12.3281L11.2402 6.77812Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1323">
+                      <rect
+                        width="29"
+                        height="22"
+                        fill="white"
+                        transform="translate(0.240234 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1331)">
+                    <path
+                      d="M22.2335 22.8299H22.2395V14.7609C22.2395 10.8139 21.3895 7.77287 16.7755 7.77287C15.909 7.74051 15.0499 7.94397 14.29 8.36153C13.5301 8.7791 12.8977 9.39511 12.4605 10.1439H12.3965V8.14387H8.02246V22.8289H12.5785V15.5559C12.5785 13.6409 12.9415 11.7889 15.3125 11.7889C17.6495 11.7889 17.6835 13.9739 17.6835 15.6779V22.8289L22.2335 22.8299Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M0.607422 8.14258H5.16442V22.8306H0.607422V8.14258Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M2.88179 0.830105C2.35587 0.827733 1.84109 0.981671 1.40281 1.27238C0.964531 1.56309 0.622503 1.97747 0.420142 2.46291C0.217782 2.94835 0.164213 3.48297 0.266235 3.99891C0.368257 4.51485 0.621271 4.98885 0.99316 5.36074C1.36505 5.73263 1.83905 5.98564 2.35499 6.08766C2.87093 6.18969 3.40555 6.13612 3.89099 5.93376C4.37643 5.7314 4.79081 5.38937 5.08152 4.95109C5.37223 4.5128 5.52617 3.99803 5.52379 3.47211C5.52353 2.77148 5.24509 2.09964 4.74968 1.60422C4.25426 1.10881 3.58242 0.83037 2.88179 0.830105Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1331">
+                      <rect
+                        width="22"
+                        height="22"
+                        fill="white"
+                        transform="translate(0.240234 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1340)">
+                    <path
+                      d="M18.2247 0.830078H7.09479C5.2775 0.832196 3.53524 1.55505 2.25022 2.84007C0.965206 4.12509 0.242352 5.86734 0.240234 7.68463L0.240234 18.8155C0.242352 20.6328 0.965206 22.3751 2.25022 23.6601C3.53524 24.9451 5.2775 25.668 7.09479 25.6701H18.2247C20.0421 25.6682 21.7847 24.9455 23.0699 23.6604C24.3551 22.3754 25.0781 20.633 25.0802 18.8155V7.68463C25.0781 5.86717 24.3551 4.12476 23.0699 2.83972C21.7847 1.55467 20.0421 0.831931 18.2247 0.830078ZM22.8761 18.8155C22.8747 20.0487 22.3843 21.2311 21.5122 22.1031C20.6402 22.9751 19.4579 23.4656 18.2247 23.4669H7.09479C5.86105 23.4664 4.67796 22.9762 3.80529 22.1041C2.93263 21.232 2.44174 20.0493 2.44041 18.8155V7.68463C2.44094 6.45038 2.93148 5.26683 3.80423 4.39408C4.67698 3.52133 5.86053 3.03079 7.09479 3.03026H18.2247C19.4579 3.03158 20.6402 3.52206 21.5122 4.39407C22.3843 5.26609 22.8747 6.44841 22.8761 7.68163V18.8155Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M12.6603 6.84961C11.3944 6.84961 10.1569 7.22499 9.10435 7.92829C8.05179 8.63159 7.23142 9.63121 6.74698 10.8008C6.26254 11.9703 6.13579 13.2572 6.38275 14.4988C6.62972 15.7404 7.23931 16.8808 8.13444 17.776C9.02957 18.6711 10.17 19.2807 11.4116 19.5277C12.6532 19.7746 13.9401 19.6479 15.1097 19.1634C16.2792 18.679 17.2788 17.8586 17.9821 16.8061C18.6854 15.7535 19.0608 14.516 19.0608 13.2501C19.059 11.5532 18.384 9.92625 17.1841 8.72632C15.9842 7.52639 14.3572 6.85146 12.6603 6.84961ZM12.6603 17.4505C11.8295 17.4505 11.0174 17.2041 10.3267 16.7426C9.63596 16.281 9.09759 15.625 8.77968 14.8575C8.46176 14.09 8.37859 13.2455 8.54066 12.4307C8.70273 11.6159 9.10277 10.8675 9.6902 10.28C10.2776 9.69261 11.0261 9.29256 11.8408 9.13049C12.6556 8.96842 13.5002 9.0516 14.2677 9.36952C15.0352 9.68743 15.6912 10.2258 16.1527 10.9165C16.6143 11.6073 16.8606 12.4194 16.8606 13.2501C16.8596 14.3634 16.4166 15.4308 15.629 16.2176C14.8414 17.0045 13.7736 17.4465 12.6603 17.4465V17.4505Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M19.3288 4.98047C18.9552 4.98071 18.5932 5.11047 18.3046 5.34764C18.0159 5.58481 17.8184 5.91472 17.7457 6.28117C17.673 6.64763 17.7296 7.02795 17.9059 7.35736C18.0821 7.68677 18.3671 7.94489 18.7123 8.08774C19.0575 8.23059 19.4416 8.24935 19.799 8.14081C20.1565 8.03227 20.4653 7.80315 20.6728 7.49248C20.8803 7.18181 20.9737 6.80881 20.9371 6.43701C20.9004 6.06522 20.736 5.71764 20.4718 5.45347C20.1682 5.15101 19.7573 4.98096 19.3288 4.98047Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1340">
+                      <rect
+                        width="24.84"
+                        height="24.84"
+                        fill="white"
+                        transform="translate(0.240234 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="21"
+                  height="26"
+                  viewBox="0 0 21 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1349)">
+                    <path
+                      d="M1.13368 10.0208C-0.98032 13.6888 0.363679 19.2538 2.70068 22.6288C3.86768 24.3158 5.04868 25.8288 6.66668 25.8288H6.75868C7.39815 25.7873 8.02329 25.6208 8.59868 25.3388C9.27735 25.0051 10.0224 24.8284 10.7787 24.8218C11.4994 24.8285 12.209 24.9995 12.8537 25.3218C13.4697 25.6347 14.1508 25.7981 14.8417 25.7988C16.6637 25.7648 17.7827 24.1308 18.7697 22.6888C19.5084 21.6018 20.088 20.4148 20.4907 19.1638L20.4977 19.1418C20.5148 19.0939 20.5131 19.0413 20.4928 18.9947C20.4726 18.9481 20.4353 18.9109 20.3887 18.8908L20.3737 18.8848C19.4369 18.4832 18.638 17.8162 18.0757 16.9661C17.5133 16.1161 17.2119 15.12 17.2087 14.1008C17.221 13.1985 17.4603 12.3138 17.9043 11.5283C18.3484 10.7428 18.983 10.0816 19.7497 9.60577L19.7697 9.59377C19.7932 9.57941 19.8136 9.56033 19.8294 9.53773C19.8452 9.51514 19.8562 9.48951 19.8617 9.46246C19.8671 9.43541 19.8669 9.40752 19.8611 9.38055C19.8552 9.35359 19.8439 9.32812 19.8277 9.30576C19.302 8.55235 18.6079 7.9318 17.8006 7.49333C16.9933 7.05487 16.0949 6.81056 15.1767 6.77977C15.0447 6.76677 14.9077 6.75977 14.7707 6.75977C13.7607 6.81851 12.7707 7.06577 11.8517 7.48877C11.4097 7.70035 10.9373 7.8414 10.4517 7.90677C9.94962 7.84665 9.46099 7.70371 9.00568 7.48376C8.20445 7.10918 7.33956 6.88965 6.45668 6.83677H6.39168C5.31522 6.86959 4.2655 7.17997 3.34427 7.73782C2.42305 8.29567 1.66158 9.08206 1.13368 10.0208Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M15.1793 0.830207C13.723 0.968283 12.3752 1.66023 11.4143 2.76321C10.9326 3.29894 10.564 3.92649 10.3308 4.60818C10.0976 5.28988 10.0046 6.01166 10.0573 6.73021C10.0626 6.77701 10.0843 6.82042 10.1185 6.8528C10.1527 6.88518 10.1973 6.90445 10.2443 6.90721C10.3313 6.91421 10.4203 6.91721 10.5093 6.91721C11.1981 6.88481 11.8719 6.70525 12.4854 6.39063C13.099 6.076 13.638 5.63361 14.0663 5.09321C15.0283 3.96092 15.5045 2.49467 15.3913 1.01321C15.3855 0.961599 15.3605 0.914072 15.3212 0.88014C15.2819 0.846207 15.2312 0.828373 15.1793 0.830207Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1349">
+                      <rect
+                        width="20.43"
+                        height="25"
+                        fill="white"
+                        transform="translate(0.0800781 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1358)">
+                    <path
+                      d="M3.20826 23.3503C2.62494 23.3503 2.06551 23.1186 1.65303 22.7061C1.24056 22.2936 1.00884 21.7342 1.00884 21.1509V3.55545C1.00634 3.18043 1.10039 2.81108 1.28194 2.48293C1.4635 2.15477 1.72644 1.87886 2.04548 1.68173C2.36452 1.4846 2.72892 1.37289 3.10363 1.35735C3.47833 1.3418 3.85074 1.42294 4.18501 1.59297L21.7804 10.3957C22.1454 10.5764 22.4527 10.8555 22.6675 11.2016C22.8823 11.5477 22.9961 11.9469 22.9961 12.3542C22.9961 12.7615 22.8823 13.1607 22.6675 13.5067C22.4527 13.8528 22.1454 14.1319 21.7804 14.3126L4.18501 23.1153C3.8821 23.2685 3.54768 23.3489 3.20826 23.3503ZM3.20826 2.45574C2.9166 2.45574 2.63689 2.5716 2.43065 2.77784C2.22441 2.98408 2.10855 3.26379 2.10855 3.55545V21.1509C2.10903 21.3377 2.15711 21.5213 2.24824 21.6845C2.33938 21.8476 2.47057 21.9848 2.62944 22.0831C2.78831 22.1814 2.96961 22.2377 3.15625 22.2465C3.34288 22.2554 3.52869 22.2165 3.69614 22.1336L21.2915 13.3359C21.4744 13.2467 21.6284 13.1079 21.7362 12.9354C21.844 12.7629 21.9011 12.5636 21.9011 12.3602C21.9011 12.1567 21.844 11.9574 21.7362 11.7849C21.6284 11.6124 21.4744 11.4736 21.2915 11.3844L3.69014 2.57571C3.54098 2.49893 3.37601 2.45786 3.20826 2.45574Z"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="0.999739"
+                    />
+                    <path
+                      d="M3.5459 2.47702L4.3237 1.69922L18.0131 15.3896L17.2353 16.1674L3.5459 2.47702Z"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="0.999739"
+                    />
+                    <path
+                      d="M3.55664 22.2333L17.2451 8.54492L18.0229 9.32272L4.32944 23.0101L3.55664 22.2333Z"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="0.999739"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1358">
+                      <rect
+                        width="22.99"
+                        height="23.018"
+                        fill="white"
+                        transform="translate(0.509766 0.832031)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+            <a href="">
+              <li>
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_77_1368)">
+                    <path
+                      d="M22.9002 7.34914C21.8302 5.50914 20.3702 4.04914 18.5302 2.97914C16.6802 1.90914 14.6802 1.36914 12.5002 1.36914C10.3202 1.36914 8.31023 1.90914 6.47023 2.97914C4.63023 4.04914 3.17023 5.50914 2.10023 7.34914C1.03023 9.18914 0.490234 11.1991 0.490234 13.3691C0.490234 15.9891 1.25023 18.3391 2.78023 20.4291C4.31023 22.5191 6.28023 23.9691 8.70023 24.7691C8.98023 24.8191 9.19023 24.7891 9.32023 24.6591C9.3861 24.6003 9.43817 24.5277 9.47275 24.4465C9.50732 24.3652 9.52353 24.2774 9.52024 24.1891C9.52024 24.1591 9.52024 23.8791 9.51023 23.3491C9.50023 22.8191 9.50023 22.3491 9.50023 21.9591L9.14023 22.0191C8.91024 22.0591 8.62023 22.0791 8.27023 22.0691C7.92023 22.0591 7.56023 22.0291 7.19023 21.9591C6.81023 21.8891 6.47023 21.7391 6.14023 21.4891C5.81023 21.2391 5.61023 20.9291 5.47023 20.5291L5.31023 20.1691C5.21023 19.9291 5.04023 19.6691 4.82023 19.3691C4.60023 19.0791 4.37023 18.8791 4.14023 18.7791L4.03023 18.6991C3.95643 18.6438 3.88931 18.58 3.83023 18.5091C3.77311 18.443 3.72595 18.3689 3.69023 18.2891C3.66023 18.2191 3.68023 18.1591 3.77023 18.1091C3.85023 18.0591 4.01023 18.0491 4.22023 18.0491L4.53023 18.0991C4.74023 18.1391 5.00023 18.2591 5.30023 18.4791C5.61023 18.6891 5.86023 18.9591 6.06023 19.2891C6.30023 19.7191 6.59023 20.0491 6.93023 20.2591C7.27023 20.4791 7.61023 20.5891 7.95023 20.5891C8.29023 20.5891 8.59023 20.5591 8.84023 20.5091C9.09023 20.4591 9.32023 20.3791 9.54023 20.2691C9.63023 19.5691 9.89023 19.0291 10.3102 18.6591C9.72023 18.5991 9.18023 18.4991 8.71023 18.3791C8.23023 18.2491 7.75023 18.0491 7.24023 17.7691C6.73023 17.4891 6.31023 17.1391 5.98023 16.7191C5.65023 16.2991 5.37023 15.7591 5.16023 15.0791C4.95023 14.3991 4.84023 13.6191 4.84023 12.7391C4.84023 11.4791 5.25023 10.4091 6.08023 9.51914C5.68023 8.58914 5.72023 7.52914 6.18023 6.34914C6.48023 6.25914 6.93023 6.32914 7.53023 6.55914C8.13023 6.78914 8.56023 6.99914 8.83023 7.15914C9.10023 7.32914 9.32023 7.46914 9.49023 7.58914C10.4602 7.31914 11.4602 7.17914 12.4902 7.17914C13.5202 7.17914 14.5202 7.31914 15.4902 7.58914L16.0802 7.21914C16.4902 6.96914 16.9702 6.73914 17.5202 6.52914C18.0702 6.31914 18.4902 6.25914 18.7902 6.35914C19.2602 7.53914 19.3002 8.59914 18.9202 9.54914C19.7402 10.4391 20.1602 11.5091 20.1602 12.7691C20.1602 13.6591 20.0502 14.4391 19.8402 15.1191C19.6302 15.7991 19.3502 16.3491 19.0102 16.7591C18.6702 17.1691 18.2502 17.5191 17.7402 17.7991C17.2302 18.0791 16.7402 18.2891 16.2702 18.4091C15.7454 18.5457 15.2103 18.6393 14.6702 18.6891C15.2102 19.1591 15.4802 19.8991 15.4802 20.9091V24.2091C15.4802 24.3991 15.5502 24.5591 15.6802 24.6791C15.8102 24.8091 16.0102 24.8391 16.3002 24.7891C18.7202 23.9791 20.6902 22.5391 22.2202 20.4491C23.7502 18.3591 24.5102 16.0091 24.5102 13.3891C24.5102 11.1991 23.9702 9.18914 22.9002 7.34914Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_77_1368">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0.5 0.830078)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+            </a>
+          </ul>
+          <ul class="footer-about">
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">FAQ</a></li>
+          </ul>
+          <p class="text-footer">Play Games @ Pointhead © 2000 - 2023</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script-merch.js"></script>
+  </body>
+</html>
